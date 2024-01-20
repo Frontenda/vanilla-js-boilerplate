@@ -158,5 +158,19 @@
     <!-- Eruda is console for mobile browsers -->
     <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
+    <script>
+        (function () {
+            var model = 'product-photos-ai';
+            var script = document.createElement('script');
+            var top = '0'
+            var bottom = '0';
+            script.src = 'https://generator.ws/assets/embed-script.js?ver=704330';
+            script.onload = function () {
+                // Call the function from the external script once it's loaded
+                addIframeToPage(model, top, bottom);
+            };
+            document.head.appendChild(script);
+        })();
+    </script>
 </body>
 </html>
